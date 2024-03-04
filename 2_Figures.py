@@ -11,13 +11,15 @@ CC_300K   = 2.4373e6 / (461.52 * 300.**2.)
 
 ds= xr.open_dataset('/chemin/vers/lequel/enregristrer/le/datataset.nc')
 
-B1_precip_per  = np.log(ds.sel(sst_bins=slice(300,302.5)).precip_per).polyfit(dim='sst_bins',deg=1).isel(degree=0).polyfit_coefficients           # Beta 1 de l'équation (1) de la méthode de Hatsukal et al. (2020)
+# Calcul des pentes du scaling des précipitations extrêmes sur l'intervalle [300K, 302.5K].
+
+B1_precip_per  = np.log(ds.sel(sst_bins=slice(300,302.5)).precip_per).polyfit(dim='sst_bins',deg=1).isel(degree=0).polyfit_coefficients  # Beta 1 de l'équation (1) de la méthode de Hatsukal et al. (2020)
 B1_precip_mean = np.log(ds.sel(sst_bins=slice(300,302.5)).precip_mean).polyfit(dim='sst_bins',deg=1).isel(degree=0).polyfit_coefficients
 
-pente_precip_per  = (np.exp(B1_precip_per ) - 1.) * 100.
-pente_precip_mean = (np.exp(B1_precip_mean) - 1.) * 100.
+pente_precip_per  = (np.exp(B1_precip_per ) - 1.) * 100. #Valeur des pentes (en %/K) sur l'intervalle [300K, 302.5K] du centile des précipitations extrêmes.
+pente_precip_mean = (np.exp(B1_precip_mean) - 1.) * 100. #Valeur des pentes (en %/K) sur l'intervalle [300K, 302.5K] de la moyenne des précipitations dans les 10% du centile.
 
-contrib = 100.* ds.precip_volume / ds.precip_volume.sum('SST')
+#NB : Pour afficher les valeurs de pente, afficher par exemple dans un terminal pente_precip_mean.isel(quantile=12).values
 
 ###############################################################################################################################################################################################################################################################
 ###############################################################################################################################################################################################################################################################
@@ -26,6 +28,8 @@ contrib = 100.* ds.precip_volume / ds.precip_volume.sum('SST')
 ###############################################################################################################################################################################################################################################################
 
 #Contribution au cumul 
+
+contrib = 100.* ds.precip_volume / ds.precip_volume.sum('SST')
 
 fig,ax = plt.subplots(figsize=(14,13))
 
