@@ -1,7 +1,7 @@
 # scaling
 Scripts permettant le prétraitement de données de précipitation et de température afin de calculer le scaling des précipitations extrêmes ainsi que le post-traitement pour obtenir les figures correspondantes.
 
-1_Preprocessing_old_multiproduits_IDL.pro est un script IDL que j'utilisais au cours de ma thèse pour faire le prétraitement des données et de calculer les statistiques du scaling sur plusieurs produits de température et de précipitation.
+1_Preprocessing_old_multiproduits_IDL.pro est un script IDL que j'utilisais au cours de ma thèse pour faire le prétraitement des données et calculer les statistiques du scaling sur plusieurs produits de température et de précipitation.
 
 1_Preprocessing.py est un script python permettant le prétraitement des données et de calculer les statistiques. Il est sensé être équivalent au script IDL. Je l'ai crée sans pouvoir le tester sur les données girafe mais il donne tous les éléments clés pour s'en sortir.
 
