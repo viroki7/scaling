@@ -38,8 +38,7 @@ ax.set_xlabel('SST(t-48h) daily average [K]', fontsize=20)
 ax.set_ylabel('Contribution to total rainfall amount [%]', fontsize=20)
 ax.axvline(x=300.25, color='k', alpha=0.65, linestyle='-',linewidth=2)#,dashes=[4,4])
 ax.axvline(x=302.25, color='k', alpha=0.65, linestyle='-',linewidth=2)#,dashes=[4,4])
-ax.fill_between(ds.sst_bins, contrib-contrib, contrib+contrib,alpha=0.04, facecolor='k',linewidth=0)
-ax.plot(ds.sst_bins,contrib,label='Label', color='k', linewidth=5, linestyle='-')
+ax.plot(ds.sst_bins, contrib, label='Contribution', color='k', linewidth=5, linestyle='-')
 ax.set_xlim([299.25, 303.75])	
 ax.set_ylim([0,20])
 ax.set_xticks(np.arange(300, 304, step=1))
@@ -55,9 +54,9 @@ ax.legend(fontsize=14)
 plt.savefig('/chemin/vers/plot.png', dpi=300)
 
 
-# ###############################################################################################################################################################################################################################################################
+###############################################################################################################################################################################################################################################################
 
-# #Nombre de gridbox
+#Nombre de gridbox
 
 fig, axs = plt.subplots(1,2,figsize=(22,10), facecolor='w', edgecolor='k',sharey=False)
 # fig.suptitle('',fontsize=25)
@@ -72,7 +71,7 @@ for i in range(0,2):
 	axs[i].set_ylim([10**0,10**3])
 	# axs[i].set_yticks(np.arange(10**0,10**4, step=10**1))
 	# axs[i].yaxis.set_minor_locator(MultipleLocator(1))
-	axs[i].set_ylabel('# extreme gridboxess', fontsize=17)
+	axs[i].set_ylabel('# of extreme gridboxes', fontsize=17)
 	axs[i].set_xlabel('SST(t-48h) daily average [K]', fontsize=17)
 	axs[i].axvline(x=300.25, color='k', linestyle='--',linewidth=2,dashes=[4,4])
 	axs[i].axvline(x=302.25, color='k', linestyle='--',linewidth=2,dashes=[4,4])
@@ -88,7 +87,7 @@ plt.savefig('/chemin/vers/plot.png', dpi=300)
 
 ################################################################################################################################################################################################################################################################
 
-#moyenne de la précip extrême dans les 10% de la valeur du centile
+#Scaling de la moyenne de la précip extrême dans les 10% de la valeur du centile
 
 fig, ax = plt.subplots(figsize=(9,10), facecolor='w', edgecolor='k',sharey=False)
 ax.set_yscale('log')
