@@ -1,6 +1,6 @@
 ; PROGRAMME PRINCIPALE DES PARAMETRES DES MCS SUR OCEAN, PENSER A LA Tb DANS LA LECTURE
 
-; cd /home/vdemeyer/MCS/JOB/ && qsub -v prodshort=GSMArtg,tempshort=OISST job_param_MCS.pbs && qsub -v prodshort=CMORg,tempshort=OISST job_param_MCS.pbs && qsub -v prodshort=TMPA,tempshort=OISST job_param_MCS.pbs && qsub -v prodshort=IMFC,tempshort=OISST job_param_MCS.pbs && qsub -v prodshort=HOAP,tempshort=OISST job_param_MCS.pbs && qsub -v prodshort=GPCPnew,tempshort=OISST job_param_MCS.pbs && qsub -v prodshort=GSMArtg,tempshort=OSTIA job_param_MCS.pbs && qsub -v prodshort=CMORg,tempshort=OSTIA job_param_MCS.pbs && qsub -v prodshort=TMPA,tempshort=OSTIA job_param_MCS.pbs && qsub -v prodshort=IMFC,tempshort=OSTIA job_param_MCS.pbs && qsub -v prodshort=HOAP,tempshort=OSTIA job_param_MCS.pbs && qsub -v prodshort=GPCPnew,tempshort=OSTIA job_param_MCS.pbs
+; si besoin des fichiers des fichiers load_*, me contacter à de_meyer.victorien@uqam.ca
 
 nn                      = 360
 mm                      = 180
