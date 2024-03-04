@@ -9,7 +9,7 @@ import xarray as xr
 
 CC_300K   = 2.4373e6 / (461.52 * 300.**2.)
 
-ds= xr.open_dataset('/chemin/vers/lequel/enregristrer/le/datataset.nc')
+ds = xr.open_dataset('/chemin/vers/lequel/le/datataset_est_enregistré.nc')
 
 # Calcul des pentes du scaling des précipitations extrêmes sur l'intervalle [300K, 302.5K].
 
