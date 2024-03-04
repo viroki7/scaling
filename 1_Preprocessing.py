@@ -88,7 +88,7 @@ for label, group in tqdm(rain_tropics_binned): #Pour chacun des bins de tempéra
 moyennes_par_bin = xr.concat(moyennes_dataarray, dim='sst_bins').sortby('sst_bins') #Concaténation des DataArray de la moyenne pour en avoir un unique avec la dimension sst_bins
 moyennes_par_bin = moyennes_par_bin.sortby('sst_bins')
 
-count_par_bin = xr.concat(count_dataarray, dim='sst_bins').sortby('sst_bins')
+count_par_bin = xr.concat(count_dataarray, dim='sst_bins')
 count_par_bin = count_par_bin.sortby('sst_bins')
 
 
