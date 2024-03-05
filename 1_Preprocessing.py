@@ -32,7 +32,7 @@ temp_shift = ds_temp_tropics['sst_variable'].shift(time=2) #remplacer 'sst_varia
 
 #Liste des fichiers NetCDF de précipitation
 filenames_rain = glob.glob('/chemin/vers/les/données/de/girafe.nc') #exemple : glob.glob('/home/USER/DATA/NCDF/RAIN/*/RAIN_*.nc')
-#Ouverture des fichiers de température
+#Ouverture des fichiers de précipitation
 ds_rain = xr.open_mfdataset(filenames_rain)
 #Sélection des latitudes tropicales uniquement
 ds_rain_tropics = ds_rain.sel(latitude=slice(30,-30))
