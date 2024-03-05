@@ -64,7 +64,7 @@ rain_tropics_centile = rain_tropics_binned.quantile(per, method='lower')
 rain_tropics_volume  = rain_tropics_binned.sum()
 
 
-#A présent les mêmes calculs sont faits, mais plutôt que calculer les statistiques pour les précipitations
+#A présent les mêmes calculs sont faits, mais plutôt que de calculer les statistiques pour les précipitations
 #supérieures à la valeur du centile, elles sont calculées sur les précipitations dans un certain intervalle (en %)
 #autour de la valeur du centile
 
