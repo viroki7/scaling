@@ -2,6 +2,8 @@ import glob
 import numpy as np
 import xarray as xr
 from tqdm import tqdm
+import warnings
+warnings.filterwarnings("ignore")
 
 """
 Ce script lit des données de température, de précipitation ainsi qu'un masque terre/mer
